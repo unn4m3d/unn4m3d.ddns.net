@@ -1,0 +1,5 @@
+target :all{
+  system "git pull origin master"
+  system "bundle install"
+  system "rake db:migrate"
+}
