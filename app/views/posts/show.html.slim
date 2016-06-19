@@ -1,0 +1,19 @@
+h1 class="post-header"
+ == @post.title
+div class="post"
+  div class="post-content"
+    == markdown @post.content
+  div class="post-meta"
+    == @post.user.username
+    |  at 
+    == @post.post_date.strftime("%c")
+  ul class="post-buttons"
+    - if can? :update, @post
+      li
+        == link_to "Edit", controller: "posts", action: "update", id: @post.id 
+    - if can? :delete, @post
+      li
+        == link_to "Delete", controller: "posts", action: "delete", id: @post.id
+    - if can? :read, @post
+      li
+        == link_to "Show", controller: "posts", action: "show", id: @post.id 

@@ -1,0 +1,11 @@
+h1 Create post
+form method="POST"
+  .field
+    input type="text" name="title" placeholder="title"/
+  input type="hidden" name="authenticity_token" id="authenticity_token" value=form_authenticity_token /
+  .field
+    textarea name="content"
+      | Text...
+  .field
+    input type="submit"
+  
