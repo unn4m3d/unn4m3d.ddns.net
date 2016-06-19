@@ -4,6 +4,7 @@
 $c1 : lime;
 $c2 : black;
 $c3 : white;
+$c4 : grey;
 
 @mixin box($lw){
   border: $lw solid $c1;
@@ -79,6 +80,39 @@ div.post{
     a{
       @include box(1px);
 
+    }
+  }
+}
+
+code{
+  font-size: 15px;
+  color : $c4;
+  pre>&{
+    border : 1px dashed $c1;
+  }
+}
+
+@mixin textf {
+  background: transparent;
+  color : $c1;
+  border: 1px solid $c1;
+}
+
+div.field{
+  textarea{
+    width : 100%;
+    min-height: 100px;
+    @include textf;
+    font-family: monospace;
+    font-size: 15px;
+  }
+  input{
+    @include textf;
+    &[type=text]{
+      font-family: monospace;
+      &[name=title]{
+        font-size: 20px;
+      }
     }
   }
 }

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cid: 
+  qid: 
+  text: MyText
+  author: MyString
+  date: MyString
+  rating: 
+
+two:
+  cid: 
+  qid: 
+  text: MyText
+  author: MyString
+  date: MyString
+  rating: 
