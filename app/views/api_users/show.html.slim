@@ -1,0 +1,21 @@
+h1 List of API users
+
+table
+  tr
+    th #
+    th ID
+    th Name
+    - if can? :read_token, ApiUser
+      th Token
+  - i = 1
+  - for user in @users
+    tr
+      td
+        == i
+      td
+        == user.id
+      td
+        == user.name
+      - if can? :read_token, ApiUser
+        td
+          == user.token

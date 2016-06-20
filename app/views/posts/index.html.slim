@@ -24,4 +24,4 @@ h1 Posts
         li
           == link_to "Show", controller: "posts", action: "show", id: post.id 
       
-== paginate @posts
+== paginate Post.all
