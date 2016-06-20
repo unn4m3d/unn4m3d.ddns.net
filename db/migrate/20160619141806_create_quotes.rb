@@ -9,6 +9,6 @@ class CreateQuotes < ActiveRecord::Migration
       t.bigint :rating
 
       t.timestamps null: false
-    end
+    end unless ActiveRecord::Base.connection.table_exists? 'quotes'
   end
 end
